@@ -1,0 +1,13 @@
+{
+  "name": "Arabic audio-text forced alignment",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bullseye",
+  "forwardPorts": [7860],
+  "portsAttributes": {
+    "7860": {
+      "label": "Arabic audio word alignment",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postCreateCommand": "bash scripts/setup.sh",
+  "postStartCommand": "bash scripts/start.sh"
+}
