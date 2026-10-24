@@ -70,7 +70,7 @@ with gr.Blocks(title="محاذاة النص العربي مع الصوت") as de
     gr.Markdown("# مطابقة النص العربي مع الصوت\nارفع التسجيل وألصق نصه الصحيح لاستخراج توقيت الكلمات. التشغيل سحابي داخل Codespaces، وقد يستغرق على المعالج العادي.")
     with gr.Row():
         audio = gr.File(label="التسجيل الصوتي", type="filepath", file_types=["audio", ".wav", ".mp3", ".m4a", ".ogg", ".flac"])
-        transcript = gr.Textbox(label="النص العربي المطابق للتسجيل", lines=10, rtl=True)
+        transcript = gr.Textbox(label="النص العربي المطابق للتسجيل", lines=10)
     run_button = gr.Button("مطابقة النص بالصوت", variant="primary")
     table = gr.Dataframe(headers=["الكلمة", "البداية بالثواني", "النهاية بالثواني"], datatype=["str", "number", "number"], label="التوقيت")
     with gr.Row():
